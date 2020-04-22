@@ -1,7 +1,7 @@
 # 장고에 대한 정리
  
- 
-https://tutorial.djangogirls.org/ko/django_models/ 참고!
+## 기본정리
+https://tutorial.djangogirls.org/ko/ 참고!
 
 - 기본
 1. 아나콘다 설치
@@ -23,8 +23,28 @@ https://tutorial.djangogirls.org/ko/django_models/ 참고!
  // (myenv) c:..... > 이렇게 변경되면 가상환경 적용된 것. 
 ```
 
+ - 패키지 목록 저장하기 & 설치하기
+ 
+
+freeze 를 사용하면, 현재까지 설치한 패키지의 목록들을 저장 할 수 있습니다.
+pip install ~~~ 해줄때마다 실행!!
+ 
+```
+(가상환경) pip freeze > fileList.txt
+```
+
+지금까지 설치 한 목록을 fileList.txt에 저장 하는 명령어 입니다.
+fileList.txt가 있으면, 지금 설치되어있는 패키지의 리스트를 동일하게 설치 할 수 있습니다.
+
+ 
+```
+(가상환경) pip install -r fileList.txt
+```
+fileList.txt에 저장되어있는 목록을 "-r" 옵션을 사용해서 설치 했습니다.
+
 3.장고 설치
 ```
+관리자권한으로 cmd 실행.
  > python -m pip install --upgrade pip
  > python -m pip install django~=2.0.0
  // 2.0대 버전을 다운 받겠다는것. 현재 3.0 이상 나옴.
@@ -74,6 +94,7 @@ STATIC_ROOT=os.path.join(BASE_DIR, 'static') // 새로 추가
 이와 같이 실행할수 있음.
 
 
+##프로젝트 시작
 6.블로그 만들기
 ```
  > python manage.py startapp blog(만들고자 하는 웹 이름)
