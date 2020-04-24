@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# -*- coding: utf-8 -*-
 """
 This is a temporary script file.
 """
