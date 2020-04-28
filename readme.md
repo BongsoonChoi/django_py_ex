@@ -6,10 +6,12 @@ https://tutorial.djangogirls.org/ko/ 참고!
 ####- 기본
 1. 아나콘다 설치
 2. 파이참 설치
-
+***
+***
  ####- 시작하기
 
-``1.가상환경 만들기``
+**1.가상환경 만들기**
+
  ```
  > mkdir django_py
  > cd django_py
@@ -17,7 +19,8 @@ https://tutorial.djangogirls.org/ko/ 참고!
  > python -m venv myenv
  ```
  
-``2.가상환경 사용하기``
+**2.가상환경 사용하기**
+
 ```
  > myenv\Scripts\activate
  // (myenv) c:..... > 이렇게 변경되면 가상환경 적용된 것. 
@@ -42,7 +45,8 @@ fileList.txt가 있으면, 지금 설치되어있는 패키지의 리스트를 �
 ```
 fileList.txt에 저장되어있는 목록을 "-r" 옵션을 사용해서 설치 했습니다.
 
-``3.장고 설치``
+**3.장고 설치**
+
 ```
 관리자권한으로 cmd 실행.
  > python -m pip install --upgrade pip
@@ -50,7 +54,8 @@ fileList.txt에 저장되어있는 목록을 "-r" 옵션을 사용해서 설치 
  // 2.0대 버전을 다운 받겠다는것. 현재 3.0 이상 나옴.
 ```
  
-``4.프로젝트 만들기``
+**4.프로젝트 만들기**
+
 ```
  > myenv\Scripts\django-admin.exe startproject mysite .
  // 가상환경 내에 장고 어드민 파일로 프로젝트 생성
@@ -69,7 +74,8 @@ django_py
 ├───manage.py
 ```
 
-``5.설정 변경``
+**5.설정 변경**
+
 ```
 mysite/settings.py
 
@@ -94,11 +100,14 @@ STATIC_ROOT=os.path.join(BASE_DIR, 'static') // 새로 추가
 ```
 이와 같이 실행할수 있음.
 
-
+***
+***
 ##프로젝트 시작
 
 
-``6.블로그 만들기``
+**6.블로그 만들기**
+
+
 ```
  > python manage.py startapp blog(만들고자 하는 웹 이름)
 ```
@@ -130,7 +139,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-``7.모델 제작.``
+**7.모델 제작.**
 
 blog/model.py 파일로 이동해서 장고 모델을 제작.
 
@@ -158,9 +167,12 @@ Running migrations:
 ```
 명령어를 통해 바로 반영할수있는 마이그레이션 파일이 생성된것.
 
-``8.관리자모드``
+**8.관리자모드**
+
 관리자에서 모델링한 글을 추가수정삭제 가능함.
+
 blog/admin.py를 열어 해당 코드를 추가
+
 ```
 admin.site.register(Post)
 ```
@@ -180,7 +192,8 @@ Superuser created successfully.
 ```
 완료되면 로그인 가능함.
 
-``9.URL 설정``
+**9.URL 설정**
+
 
 mysite/urls.py 파일을 확인해보면 이미 어드민에 대한 내용이 설정되어있음.
 
@@ -191,4 +204,5 @@ urlpatterns = [
     path('', include('blog.urls')), // blog 폴더밑에 urls 파일을 생성해주기.
 ]
 ```
+
 
