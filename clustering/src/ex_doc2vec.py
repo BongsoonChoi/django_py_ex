@@ -192,4 +192,7 @@ history = model.fit(X_train, Y_train, epochs=15,
                     callbacks=[es, mc, tensorboard_callback],
                     batch_size=60, validation_split=0.2)
 
-
+#%%
+loaded_model = keras.models.load_model('best_model.h5')
+print("\n 테스트 정확도: %.4f" % (loaded_model.evaluate(X_test, Y_test)[1]))
+#  첫번쨰만 검사하는것.
