@@ -3,12 +3,12 @@
 ## 기본정리
 https://tutorial.djangogirls.org/ko/ 참고!
 
-####- 기본
+#### - 기본
 1. 아나콘다 설치
 2. 파이참 설치
 ***
 ***
- ####- 시작하기
+#### - 시작하기
 
 **1.가상환경 만들기**
 
@@ -102,15 +102,16 @@ STATIC_ROOT=os.path.join(BASE_DIR, 'static') // 새로 추가
 
 ***
 ***
-##프로젝트 시작
+
+## 프로젝트 시작
 
 
 **6.블로그 만들기**
 
-
 ```
  > python manage.py startapp blog(만들고자 하는 웹 이름)
 ```
+
 실행하면 아래같은 구조가 만들어짐
 ```
     django_py
