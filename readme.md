@@ -33,7 +33,7 @@ freeze 를 사용하면, 현재까지 설치한 패키지의 목록들을 저장
 pip install ~~~ 해줄때마다 실행!!
  
 ```
-(가상환경) pip freeze > fileList.txt
+(myenv) pip freeze > fileList.txt
 ```
 
 지금까지 설치 한 목록을 fileList.txt에 저장 하는 명령어 입니다.
@@ -41,7 +41,7 @@ fileList.txt가 있으면, 지금 설치되어있는 패키지의 리스트를 �
 
  
 ```
-(가상환경) pip install -r fileList.txt
+(myenv) pip install -r fileList.txt
 ```
 fileList.txt에 저장되어있는 목록을 "-r" 옵션을 사용해서 설치 했습니다.
 
@@ -49,15 +49,15 @@ fileList.txt에 저장되어있는 목록을 "-r" 옵션을 사용해서 설치 
 
 ```
 관리자권한으로 cmd 실행.
- > python -m pip install --upgrade pip
- > python -m pip install django~=2.0.0
+(myenv)  > python -m pip install --upgrade pip
+(myenv)  > python -m pip install django~=2.0.0
  // 2.0대 버전을 다운 받겠다는것. 현재 3.0 이상 나옴.
 ```
  
 **4.프로젝트 만들기**
 
 ```
- > myenv\Scripts\django-admin.exe startproject mysite .
+ (myenv)  > myenv\Scripts\django-admin.exe startproject mysite .
  // 가상환경 내에 장고 어드민 파일로 프로젝트 생성
  // 마지막에 나온 . 은 현재 폴더를 의미하는 것임
 ```
@@ -89,14 +89,14 @@ STATIC_ROOT=os.path.join(BASE_DIR, 'static') // 새로 추가
 디비를 생성하고자하면 아래 명령어 실행
  
 ```
- > python manage.py migrate
+ (myenv) > python manage.py migrate
 ```
 
 그리고 서버를 실행하고자 하면
 ```
- > python manage.py runserver
- > python manage.py runserver 0.0.0.0:62000
- > python manage.py runserver 192.168.0.101:62111 // 세팅에서 호스트를 추가한다면..
+ (myenv) > python manage.py runserver
+ (myenv) > python manage.py runserver 0.0.0.0:62000     // 127.0.0.1:62000 으로 접속가능
+ (myenv) > python manage.py runserver 192.168.0.101:62111 // 세팅에서 호스트를 추가한다면 이렇게 함.
 ```
 이와 같이 실행할수 있음.
 
@@ -109,7 +109,7 @@ STATIC_ROOT=os.path.join(BASE_DIR, 'static') // 새로 추가
 **6.블로그 만들기**
 
 ```
- > python manage.py startapp blog(만들고자 하는 웹 이름)
+(myenv)  > python manage.py startapp blog(만들고자 하는 웹 이름)
 ```
 
 실행하면 아래같은 구조가 만들어짐
@@ -149,7 +149,7 @@ blog/model.py 파일로 이동해서 장고 모델을 제작.
 
 이후 모델을 디비에 저장하기
 ```
- > python manage.py makemigrations blog
+ (myenv) > python manage.py makemigrations blog
  // 블로그 프로젝트의 모델을 만드는 명령어
  
 Migrations for 'blog':
@@ -161,7 +161,7 @@ Migrations for 'blog':
 이를 통해 blog/migrations 폴더 밑에 이니셜파일이 하나 생성됨.
 이제 
 ```
- > python manage.py migrate blog
+ (myenv) > python manage.py migrate blog
  
 Operations to perform:
   Apply all migrations: blog
