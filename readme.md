@@ -96,6 +96,8 @@ STATIC_ROOT=os.path.join(BASE_DIR, 'static') // 새로 추가
 
 
 ##프로젝트 시작
+
+
 ``6.블로그 만들기``
 ```
  > python manage.py startapp blog(만들고자 하는 웹 이름)
