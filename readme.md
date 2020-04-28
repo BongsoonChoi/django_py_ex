@@ -10,7 +10,9 @@ https://tutorial.djangogirls.org/ko/ 참고!
 ***
 #### - 시작하기
 
-**1.가상환경 만들기**
+**1.가상환경 만들기**   
+
+* 해당 프로젝트의 의존성을 관리하기 위한 가상환경을 만드는것
 
  ```
  > mkdir django_py
@@ -19,31 +21,33 @@ https://tutorial.djangogirls.org/ko/ 참고!
  > python -m venv myenv
  ```
  
-**2.가상환경 사용하기**
+**2.가상환경 실행하기**
+
+_프로젝트의 모든 명령어는 가상환경에서 실행해야만 함_
 
 ```
  > myenv\Scripts\activate
  // (myenv) c:..... > 이렇게 변경되면 가상환경 적용된 것. 
 ```
-
- - 패키지 목록 저장하기 & 설치하기
- 
-
-freeze 를 사용하면, 현재까지 설치한 패키지의 목록들을 저장 할 수 있습니다.
-pip install ~~~ 해줄때마다 실행!!
+   
+ + 패키지 목록 저장하기 & 설치하기
  
 ```
-(myenv) pip freeze > fileList.txt
+(myenv)  > pip freeze > fileList.txt
 ```
 
++freeze 를 사용하면, 현재까지 설치한 패키지의 목록들을 저장 할 수 있습니다.
+pip install ~~~ 해줄때마다 실행해서 의존성을 관리해야함.
 지금까지 설치 한 목록을 fileList.txt에 저장 하는 명령어 입니다.
-fileList.txt가 있으면, 지금 설치되어있는 패키지의 리스트를 동일하게 설치 할 수 있습니다.
 
- 
+
 ```
-(myenv) pip install -r fileList.txt
+(myenv)  > pip install -r fileList.txt
 ```
+
++fileList.txt가 있으면, 지금 설치되어있는 패키지의 리스트를 동일하게 설치 할 수 있습니다. 
 fileList.txt에 저장되어있는 목록을 "-r" 옵션을 사용해서 설치 했습니다.
+
 
 **3.장고 설치**
 
