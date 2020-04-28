@@ -89,8 +89,10 @@ STATIC_ROOT=os.path.join(BASE_DIR, 'static') // 새로 추가
 //ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com'] //호스트 추가가 필요하다면. 
 ```
 
-디비는 기본으로 sqlite3로 설정되어있음. 추후 변경가능하겟지?
-디비를 생성하고자하면 아래 명령어 실행
+디비는 기본으로 sqlite3로 설정되어있음. 추후 변경가능
+디비를 생성하고자하면 아래 명령어 실행,
+
+변경하려면 세팅에서 변경해야한다.
  
 ```
  (myenv) > python manage.py migrate
@@ -212,4 +214,4 @@ urlpatterns = [
 ]
 ```
 
-
+여기까지 rest api 구현된것.
