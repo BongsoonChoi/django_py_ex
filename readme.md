@@ -129,6 +129,7 @@ STATIC_ROOT=os.path.join(BASE_DIR, 'static') // 새로 추가
 이거를 또 세팅에 추가해줘야함
 ```
 mysite/settings.py
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -156,6 +157,7 @@ Migrations for 'blog':
   - Create model Post
 이런 결과가 뜸.
 ```
+
 이를 통해 blog/migrations 폴더 밑에 이니셜파일이 하나 생성됨.
 이제 
 ```
